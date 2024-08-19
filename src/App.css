@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+	margin: 0;
+	background: linear-gradient(to right, #00aaff, #00ff6c);
+	display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+	width: 450px;
+	display: flex;
+	margin-top: 2rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.calculator .output {
+	width: 100%;
+	height: 100px;
+}
+.calculator > button {
+	width: 112.5px;
+	padding: 15px;
+	cursor: pointer;
+	font-size: 2rem;
+	border: 1px solid white;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator > button:hover,
+.calculator > button:focus {
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+	width: 225px !important;
+}
+
+.output {
+	background-color: rgba(0, 0, 0, 0.75);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-around;
+	padding: 0.75rem;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.output .previous-operand {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 1.5rem;
+}
+
+.output .current-operand {
+	color: white;
+	font-size: 2.5rem;
 }
